@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>คะแนนเก็บแบบทดสอบ</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="styles.css" rel="stylesheet">
+  
+  <style>
+
+    td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        font-size: 18px;
+        color: rgb(101, 101, 101);
+    }
+
+    .round-button {
+        background-color: #1a1a1a;
+        color: rgb(255, 255, 255);
+        width: 250px;
+        max-width: 90%;
+        height: 50px;
+        border-radius: 5%;
+        
+    }
+
+  
+  </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-custom  navbar-expand-lg ">
+        <div class="container-fluid">
+
+            <a class="navbar-brand mx-3" href="222.html"><i class="bi bi-house"></i></a>
+            <a class="navbar-brand" href="#">คะแนนเก็บแบบทดสอบ</a>
+                    <!-- data-bs-toggle="collapse"  บอกให้ปุ่มนี้ สามารถยุบ/ขยาย (Collapse) ได้ ||| data-bs-target="#navbarNav"  ระบุ ID ของเมนู ที่ต้องการให้เปิด/ปิด  
+                     สรุป  == ถ้าไม่มี จะกด 3 ขีด ให้แสดง เมนูไม่ได้-->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"  data-bs-target="#navbarNav"
+                aria-controls="navbarNav"  aria-label="Toggle navbarNav"> <!--aria-label="Toggle navbarNav"  มีผลทำให้ พอเป็นจอเล็ก กด สามขีด แล้วกดให้ลิงค์ไปที่อื่นได้-->
+                <span class="navbar-toggler-icon"></span> <!--navbar-toggler 3ขีด ไม่มีพื้นขาวสี่เหลี่ยม    ส่วน  navbar-toggler-icon   คือ สร้าง 3 ขีด-->
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    
+                    <li >
+                        <a class="nav-link " href="1.2.html">หน้าหลัก</a>
+                    </li>
+                    
+                    
+                    <li >
+                        <a class="nav-link" href="222.html">วิชา subject 001</a>
+                    </li>
+
+                    <li >
+                        <a class="nav-link" href="ทำข้อสอบจำลอง.html">ทำข้อสอบจำลอง</a>
+                    </li>
+
+                    <li >
+                        <a class="nav-link" href="การตั่งค่า.html">ตั่งค่า</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+
+    <!--<table class="text-left  mt-3 bg-white w-100 mb-3 mx-auto rounded-3 "style="max-width: 85%; " >
+        <tr >
+            <td class="text-center">
+                วิชา..........
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a> ● คะแนนรวม : &nbsp;&nbsp;&nbsp;../..</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a> ● คะแนนปรนัย : &nbsp;&nbsp;&nbsp;../..</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a> ● คะแนนอัตนัย : &nbsp;&nbsp;&nbsp;../..</a>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <a> ● สถานะ : &nbsp;&nbsp;&nbsp;ผ่าน</a>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-left: 0%;">
+                <div style="text-align: center;">
+                    <a href="#">
+                        <button class="round-button">ทำใหม่</button>
+                    </a>
+                </div>
+                    
+                </a>
+            </td>
+        </tr>
+        <tr>
+            <td style="padding-left: 0%;">
+                <div style="text-align: center;">
+                    <a href="#">
+                      <button class="round-button">ดูคำตอบ</button>  
+                    </a>
+               
+                </div>
+                    
+                </a>
+            </td>
+        </tr>
+        
+        
+    </table>-->
+    <div class="card-group mx-auto "style="max-width: 85%; text-align: center; padding-top: 25px; padding-bottom: 25px;">
+        <div class="card "  >
+        <div class="card-body">
+            <h5 class="card-title text-center">วิชา</h5>
+            <p class="card-text text-left">
+                ● คะแนนรวม : &nbsp;&nbsp;&nbsp;../..<br>
+                ● คะแนนปรนัย : &nbsp;&nbsp;&nbsp;../..<br>
+                ● คะแนนอัตนัย : &nbsp;&nbsp;&nbsp;../..<br>
+                ● สถานะ : &nbsp;&nbsp;&nbsp;ผ่าน<br>
+            </p>
+            <a href="#" class="card-link ">
+                <button class="round-button">ดูคำตอบ</button>
+            </a><br><br>
+            
+            <a href="#" class="card-link ">
+                <button class="round-button">ทำใหม่</button>
+            </a>
+        </div></div>
+
+
+
+</body>
+</html>

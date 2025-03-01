@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เลือกวิชาเรียน</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        th {
+            padding-top: 10px;
+            padding-left: 3px;
+        }
+    
+        td {
+            padding-bottom: 10px;
+            padding-left: 3px;
+        }
+    
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        form{
+            background-color: rgb(255, 255, 255);
+            margin-block: 20px;
+            border: thin purple;
+        }
+
+        .card{
+            margin-bottom: 15px;
+        }
+
+        button#confirmButton {
+        background-color: #6f42c1 !important;
+        color: white !important;
+        border: none !important;
+        }
+
+        button#confirmButton:hover {
+            background-color: #5a379d !important;
+            color: white !important;
+        }
+
+        button#popupConfirm {
+        background-color: #6f42c1 !important;
+        color: white !important;
+        border: none !important;
+        }
+
+        button#popupConfirm:hover {
+            background-color: #5a379d !important;
+            color: white !important;
+        }
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .popup h5 {
+            margin-bottom: 15px;
+        }
+      </style>
+</head>
+<body>
+    <!-- แถบบน -->
+    <nav class="navbar navbar-custom">
+        <a class="navbar-brand mx-3" href="#"><i class="bi bi-house"></i></a>
+        <h5 class="text-center mx-auto mb-0">เลือกวิชาเรียน</h5>
+    </nav>
+
+    <!--เนื้อหา-->
+    <div class="container mt-4" id="content">
+        
+    </div>
+
+    <!--ส่วนล่าง-->
+    <div class="footer-menu">
+        <button id="confirmButton" class="btn btn-primary">ยืนยัน</button>
+        <button id="cancelButton" class="btn btn-secondary">ยกเลิก</button>
+    </div>
+
+    <!-- ส่วน pop up -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <h5>คุณต้องการยืนยันการเลือกหรือไม่?</h5>
+            <button id="popupConfirm" class="btn btn-primary">ตกลง</button>
+            <button id="popupCancel" class="btn btn-secondary">ยกเลิก</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const subjects = ["วิชา ****A****", "วิชา ****B****", "วิชา ****C****", "วิชา ****D****", "วิชา ****E****", "วิชา ****F****"];
+            const contentDiv = document.getElementById("content");
+            const popupOverlay = document.getElementById("popupOverlay");
+
+            function loadMainPage() {
+                contentDiv.innerHTML = '';
+
+                subjects.forEach((subject, index) => {
+                    const card = document.createElement("div");
+                    card.classList.add("card");
+
+                    const cardBody = document.createElement("div");
+                    cardBody.classList.add("card-body");
+
+                    const checkbox = document.createElement("input");
+                    checkbox.type = "checkbox";
+                    checkbox.classList.add("form-check-input", "me-2");
+                    checkbox.id = `subject${index}`;
+                    checkbox.checked = true;
+
+                    const label = document.createElement("label");
+                    label.classList.add("form-check-label");
+                    label.htmlFor = `subject${index}`;
+                    label.textContent = subject;
+
+                    cardBody.appendChild(checkbox);
+                    cardBody.appendChild(label);
+                    card.appendChild(cardBody);
+                    contentDiv.appendChild(card);
+                });
+            }
+
+            // โหลดหน้าหลัก
+            loadMainPage();
+
+            //ปุ่มตกลง
+            document.getElementById("confirmButton").addEventListener("click", function () {
+                popupOverlay.style.display = "flex";
+            });
+
+            //ปุ่มตกลง popup
+            document.getElementById("popupConfirm").addEventListener("click", function () {
+                const selectedSubjects = [];
+                document.querySelectorAll(".form-check-input:checked").forEach(input => {
+                    selectedSubjects.push(input.nextElementSibling.textContent);
+                });
+                alert(`Selected Subjects: ${selectedSubjects.join(", ")}`);
+                popupOverlay.style.display = "none";
+
+                window.location.href = "../เริ่มต้น/222.html";
+            });
+
+            //ปุ่มยกเลิกpop up
+            document.getElementById("popupCancel").addEventListener("click", function () {
+                popupOverlay.style.display = "none";
+            });
+
+            //ปุ่มยกเลิก
+            document.getElementById("cancelButton").addEventListener("click", function () {
+                if (confirm("คุณต้องการยกเลิก การเลือกทั้งหมดหรือไม่?")) {
+                    document.querySelectorAll(".form-check-input").forEach(input => {
+                        input.checked = false;
+                    });
+                }
+            });
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

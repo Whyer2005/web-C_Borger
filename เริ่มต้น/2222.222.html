@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #fce4fc; 
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: #8000d5;
+            padding: 15px;
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar .title {
+            flex-grow: 1;
+            text-align: center;
+        }
+        .navbar img {
+            width: 24px;
+            height: 24px;
+            margin: 0 15px;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .button {
+            background-color: #f44336;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            border: none;
+            border-radius: 10px;
+            padding: 15px;
+            width: 80%;
+            display: block;
+            margin: 10px auto;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+        .button:hover {
+            background-color: #d32f2f;
+        }
+        .button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+        }
+        .footer-menu {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            border-top: 1px solid #ccc;
+            display: flex;
+            justify-content: space-around;
+            padding: 10px 0;
+        }
+        .footer-menu a {
+            color: #8000d5;
+            text-decoration: none;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <img src="settings-icon.png" alt="settings">
+        <span class="title">หน้าหลัก</span>
+        <img src="bell-icon.png" alt="notifications">
+    </div>
+
+    <div class="container">
+        <button class="button"><img src="book-icon.png" alt="icon"> เลือก/เพิ่มวิชาเรียน</button>
+        <button class="button"><img src="laptop-icon.png" alt="icon"> รายการแบบทดสอบ</button>
+        <button class="button"><img src="result-icon.png" alt="icon"> ผลการสอบ</button>
+    </div>
+
+    <div class="footer-menu">
+        <a href="#">📖</a>
+        <a href="#">👤</a>
+    </div>
+
+</body>
+</html>

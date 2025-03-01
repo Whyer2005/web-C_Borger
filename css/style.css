@@ -1,0 +1,128 @@
+.bg-purple {
+    background-color: #b132c7;
+
+}
+
+.bg-dark-purple {
+    background-color: #c75fdb;
+}
+
+@media (min-width: 768px) {
+    .animate {
+        animation-duration: 0.3s;
+        -webkit-animation-duration: 0.3s;
+        animation-fill-mode: both;
+        -webkit-animation-fill-mode: both;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+
+    0% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        -webkit-transform: transform;
+        -webkit-opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        -webkit-opacity: 1;
+    }
+
+    0% {
+        -webkit-transform: translateY(1rem);
+        -webkit-opacity: 0;
+    }
+}
+
+.slideIn {
+    -webkit-animation-name: slideIn;
+    animation-name: slideIn;
+}
+
+.subjects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.subjects a {
+    text-decoration: none;
+    color: black;
+}
+
+.subjects>.buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    border-radius: 15px;
+    border: 3px solid black;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+.subjects>.buttons>.info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.subjects img {
+    height: auto;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    max-height: 100%;
+}
+
+
+.bottom-bar {
+    bottom: 0;
+}
+
+/* contact page */
+.contact{
+    margin: 0px 10%;
+}
+
+.contact div{
+    padding: 12px;
+}
+.contact h1{
+    text-align: center;
+    margin-bottom: 5px;
+    margin: 12px 0px 12px;
+}
+.container{
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+}
+
+
+
+/* booststrap edit */
+.form-select-lg{
+    font-size: 1.15rem;
+}
